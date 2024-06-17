@@ -3,17 +3,13 @@
 
 cmake_minimum_required(VERSION 3.22.1)
 
-project("firstproject")
+project("firstproject" VERSION 0.1.0)
 
 # Creates your game shared library. The name must be the same as the
 # one used for loading in your Kotlin/Java or AndroidManifest.txt files.
 add_library(firstproject SHARED
-        main.cpp
-        AndroidOut.cpp
-        Renderer.cpp
-        Shader.cpp
-        TextureAsset.cpp
-        Utility.cpp)
+        source/main.cpp
+)
 
 # Searches for a package provided by the game activity dependency
 find_package(game-activity REQUIRED CONFIG)
@@ -29,4 +25,5 @@ target_link_libraries(firstproject
         GLESv3
         jnigraphics
         android
-        log)
+        log
+)
