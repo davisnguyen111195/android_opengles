@@ -8,5 +8,5 @@
 #include <android/log.h>
 
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, "LOG", __VA_ARGS__)
-
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, "threaded_app", __VA_ARGS__)
 #endif //FIRSTPROJECT_LOGGING_H
